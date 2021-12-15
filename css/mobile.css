@@ -1,0 +1,101 @@
+/* Mobile optimization */
+
+#mobile_nav {
+  position: fixed;
+  background: #040404;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 90%;
+  z-index: 101;
+  box-shadow: rgba(0,0,0,0.05) 10px 10px 10px;
+  -webkit-box-shadow: rgba(0,0,0,0.05) 10px 10px 10px;
+  left: -1000px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  display: none;
+}
+
+#mobile_nav.open {
+  left: 0px;
+}
+
+#mobile_nav_inner {
+  padding: 30px;
+}
+
+#mobile_nav_inner h3 {
+  font-size: 2em;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+#mobile_nav_inner a {
+  display: block;
+  font-size: 1.5em;
+  border-top: rgba(255,255,255,0.05) 1px solid;
+  padding: 20px 0;
+  color: rgba(255,255,255,0.5);
+}
+
+#mobile_nav_inner a:hover {
+  color: #D31027!important;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+
+  #mobile_nav {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .openMobile {
+    display: block;
+    font-size: 2em;
+    color: #ffffff;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+  }
+
+  #mobile_nav .openMobile {
+    right: 30px;
+    top: 30px;
+  }
+
+  .navbar.scrolled .openMobile, body.blog .navbar .openMobile, body.single .navbar .openMobile, body.page-template-page-linkedposts .navbar .openMobile {
+    color: #000000;
+  }
+
+  .openMobile:hover {
+    color: #D31027;
+  }
+
+  .section_4_image, #st_section_three_bg {
+    display: none;
+  }
+
+  .content_col {
+    padding: 20px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .homeDarkContent h1, .strategyDarkContent h1, .brandAuditDarkContent h1 {
+    font-size: 3em;
+  }
+
+  .brandVideo {
+    display: none;
+  }
+
+}
